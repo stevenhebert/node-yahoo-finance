@@ -5,12 +5,12 @@
   var _ = require('lodash');
   var yahooFinance = require('../..');
 
-  var SYMBOLS = [
-    'MMM',
-    'ABT',
-    'ABBV',
-    'ACN'
-  ];
+  // var SYMBOLS = [
+  //   'MMM',
+  //   'ABT',
+  //   'ABBV',
+  //   'ACN'
+  // ];
 
   var SYMBOLS = [
     'MMM',
@@ -64,7 +64,7 @@
     'ADP',
     'AVB',
     'AVY',
-//  'BHI',
+    'BHI',
     'BLL',
     'BAC',
     'BCR',
@@ -436,11 +436,12 @@
 
   yahooFinance.quote({
     symbols: SYMBOLS,
-    modules: ['earnings','summaryDetail','summaryProfile']
+    modules: ['summaryDetail']
   }).then(function (result) {
     _.each(result, function (quote, symbol) {
-      console.log(util.format('=== %s ===', symbol).cyan);
-      console.log(JSON.stringify(quote, null, 4));
+      console.log(util.format(symbol).cyan);
+      console.log(JSON.stringify(quote.summaryDetail, null, 4));
+
     });
   });
 
