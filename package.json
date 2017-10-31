@@ -29,13 +29,15 @@
   "dependencies": {
     "bluebird": "^3.5.1",
     "debug": "^2.6.9",
+    "json2csv": "^3.11.5",
     "lodash": "^4.17.4",
     "moment": "^2.19.1",
     "moment-timezone": "^0.5.13",
     "request": "^2.83.0",
     "request-promise": "^4.2.2",
     "string": "^3.3.3",
-    "tough-cookie": "^2.3.3"
+    "tough-cookie": "^2.3.3",
+    "flat": "^4.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",

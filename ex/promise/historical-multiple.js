@@ -5,6 +5,8 @@ require('colors');
 var _ = require('lodash');
 var yahooFinance = require('../..');
 
+
+
 var SYMBOLS = [
   'AAPL',
   'AMZN',
